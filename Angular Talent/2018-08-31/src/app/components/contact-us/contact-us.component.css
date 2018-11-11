@@ -1,0 +1,16 @@
+input, textarea, button {
+    width: 400px;
+    font-size: x-large;
+    margin: 10px;
+}
+
+span {
+    margin: 10px;
+    text-align: left;
+    color: red;
+    position: absolute;
+}
+
+.ng-invalid.ng-touched:not(form) {
+    background-color: pink;
+}

@@ -1,0 +1,37 @@
+
+<!-- ngNativeValidate -->
+
+<form #myForm="ngForm" (ngSubmit)="send()">
+
+    <input #firstName="ngModel" [(ngModel)]="contactUs.firstName" type="text" placeholder="First name..." name="firstName" autofocus required>
+    <span *ngIf="firstName.invalid && firstName.touched">Missing First Name</span>
+    <br><br>
+
+    <input #lastName="ngModel" [(ngModel)]="contactUs.lastName" type="text" placeholder="Last name..." name="lastName" required>
+    <span *ngIf="lastName.invalid && lastName.touched">Missing Last Name</span>
+    <br><br>
+
+    <input #email="ngModel" [(ngModel)]="contactUs.email" type="email" placeholder="Email..." name="email" email required>
+    <span *ngIf="email.invalid && email.touched && email.errors.required">Missing Email</span>
+    <span *ngIf="email.invalid && email.touched && email.errors.email">Illegal Email</span>
+    <br><br>
+
+    <textarea #message="ngModel" [(ngModel)]="contactUs.message" placeholder="Message..." name="message" required minlength="5" maxlength="50"></textarea>
+    <span *ngIf="message.invalid && message.touched && message.errors.required">Missing Message</span>
+    <span *ngIf="message.invalid && message.touched && message.errors.minlength">Missing must be larger than 5 chars</span>
+    <br><br>
+
+    <button [disabled]="myForm.form.invalid">Send</button>
+
+</form>
+
+<!-- 
+
+    1. untouched - control didn't lost focus yet.
+    2. touched - control lost focus already.
+    3. pristine - control value hasn't been changed yet.
+    4. dirty - control value has changed.
+    5. valid - control value is valid.
+    6. invalid - control value is invalid.
+
+-->

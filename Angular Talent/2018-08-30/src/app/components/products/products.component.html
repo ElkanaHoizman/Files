@@ -1,0 +1,16 @@
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Stock</th>
+        <th>Image</th>
+    </tr>
+    <tr *ngFor="let p of products">
+        <td>{{p.name}}</td>
+        <td>{{p.price}}</td>
+        <td>{{p.stock}}</td>
+        <td>
+            <img src="/assets/images/products/{{p.id}}.jpg">
+        </td>
+    </tr>
+</table>

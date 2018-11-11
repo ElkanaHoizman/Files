@@ -1,0 +1,22 @@
+{
+    "workbench.colorTheme": "Visual Studio Light",
+    "workbench.startupEditor": "none",
+    "workbench.activityBar.visible": false,
+    "editor.minimap.enabled": false,
+    "workbench.statusBar.visible": false,
+    "explorer.openEditors.visible": 0,
+    "editor.detectIndentation": false,
+    "editor.lineNumbers": "on",
+	"editor.hover.enabled": false,
+    "window.zoomLevel": 0,
+    "editor.fontSize": 18,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    "git.ignoreLegacyWarning": true,
+    "javascript.implicitProjectConfig.experimentalDecorators": true,
+	    "cSpell.userWords": [
+        "falafel",
+        "injectable",
+        "northwind"
+    ],
+}

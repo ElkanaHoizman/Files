@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    background-color: silver;
+    font-family: Verdana;
+    direction: ltr;
+}
+
+.all_sit {
+    max-width: 960px;
+    background-color: white;
+    margin: 0 auto;
+    height: 650px;
+}
+
+.blocks {
+    width: 600px;
+    min-height: 200px;
+    background-color: black;
+    margin: 0 auto;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    background-color: #c1c1c1;
+    float: left;
+    box-sizing: border-box;
+}
+
+.box img {
+    width: 150px;
+    height: 150px;
+}

@@ -1,0 +1,37 @@
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Stock</th>
+        <th>Image</th>
+    </tr>
+    <tr *ngFor="let p of products">
+        <td>
+            <a routerLink="/products/{{p.id}}">{{p.name}}</a>
+        </td>
+        <td>{{p.price}}</td>
+        <td>{{p.stock}}</td>
+        <td>
+            <!-- <app-thumbnail 
+                imageSource="/assets/images/products/{{p.id}}.jpg"
+                width="50"
+                height="50"
+                (enter)="thumbnailEnter($event)"
+                (leave)="thumbnailLeave()">
+            </app-thumbnail> -->
+
+            <app-thumbnail 
+                imageSource="/assets/images/products/{{p.id}}.jpg"
+                width="50"
+                height="50"
+                (enter)="previewImage.src=$event"
+                (leave)="previewImage.src=''">
+            </app-thumbnail>
+
+        </td>
+    </tr>
+</table>
+
+<!-- <img [src]="hoveredImage"> -->
+
+<img #previewImage>

@@ -1,0 +1,12 @@
+<app-headline>About Northwind</app-headline>
+
+<h3>We sell unique products from around the world.</h3>
+
+
+<div *ngIf="product">
+    <h4>Top Product: </h4>
+    <h5>ID: {{ product.id }}</h5>
+    <h5>Name: {{ product.name }}</h5>
+    <h5>Price: {{ product.price }}</h5>
+    <h5>Stock: {{ product.stock }}</h5>
+</div>
